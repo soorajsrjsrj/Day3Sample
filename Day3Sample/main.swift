@@ -96,8 +96,7 @@ func reverse(n:Int) -> Int{
 
 print(reverse(n: 1234))
 
-func display(3256 4103260620
-    321:Int) -> Int{
+func display(n :Int) -> Int{
     if n == 1{
         return 1
     }
@@ -105,7 +104,7 @@ func display(3256 4103260620
     return display(n: n-1)
 }
 
-display(n: 5)
+display(n: <#T##Int#>)
 
 
 
