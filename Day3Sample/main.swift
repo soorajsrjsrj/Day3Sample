@@ -96,16 +96,60 @@ func reverse(n:Int) -> Int{
 
 print(reverse(n: 1234))
 
-func display(n :Int) -> Int{
-    if n == 1{
-        return 1
+func display(n : Int) -> Int
+{
+    if n == 0 {
+        return 0
     }
     print(n)
-    return display(n: n-1)
+    return display(n: n - 1)
 }
 
-display(n: <#T##Int#>)
+display(n: 5)
+
+func displayN(n : Int)
+{
+    if n != 0 {
+        displayN(n: n - 1)
+        print(n)
+    }
+}
+
+print("PRINT 1st N number")
+displayN(n: 5)
+
+func sumN(n : Int) -> Int
+{
+    if n == 0 {
+        return 0
+    }else{
+        return n + sumN(n: n - 1)
+    }
+}
+
+let s0 = sumN(n: 5)
+
+print("SUM Rec : \(s0)")
 
 
+//Convert Binary Number to Decimal
+//Input: 1111   OUTPUT: 15
+//Input: 1010   OUTPUT: 10
+//Input: 101    OUTPUT: 5
+func binaryToDecimal(b: Int) -> Int {
+    var n = b
+    var d = 0
+    var b = 1
+    while n > 0  {
+        var ls = n % 10
+        n = n / 10
+        
+        d = d + ls * b
+        b = b * 2
+    }
+    return d
+}
 
+
+print(binaryToDecimal(b: 1010100))
 
